@@ -1,0 +1,57 @@
+body{
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+/*레이아웃*/
+.grid{
+  width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 10px 50px 30px 50px;
+  border: 2px solid #A38465;
+  border-radius: 20px;
+}
+
+.grid h1{
+  color: #333;
+  font-size: 2.4em;
+  text-align: center;
+}
+
+.grid #question{
+  font-size: 24px;
+  background-color: #96D2F0;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 2em;
+  border-radius: 15px;
+  text-align: left;
+}
+
+#quiz{ text-align: center;}
+
+/*진행정보*/
+#progress{
+  color: #2b2b2b;
+  font-size: 20px;
+}
+
+#timeLeft{ margin: 920px;
+           font-size: 50px;
+         }
+
+/* 버튼 영역 */
+.buttons{
+  padding: 30px 20px;
+  border: 2px solid #A38465;
+  border-radius: 20px;
+}
+
+.btn{
+  background-color: #fff;
+  color: #333;
+  width: 250px;
+  font-size: 16px;
+  border: 1px solid black #FFE3ED;
+}
