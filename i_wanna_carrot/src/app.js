@@ -77,21 +77,21 @@ function init()
   188, 313);
 
   canvas.addEventListener("click", function(e) {
-            console.log({x: e.layerX, y: e.layerY});
+
             var gameStart=e.layerX>150&&e.layerY>190&&
                           e.layerX<220&&e.layerY<220;
             var howToPlay=e.layerX>150&&e.layerY>240&&
                           e.layerX<220&&e.layerY<270;
             var rank=e.layerX>150&&e.layerY>290&&
                           e.layerX<220&&e.layerY<320;
-            if(gameStart){
+            if(gameStart&&!gameOn){
               startGameLoop();
               gameOn=true;
             }else if(howToPlay){
-              startGameLoop();
-              console.log("howToPlay");
+              
+
             }else if(rank){
-              console.log("rank");
+
             }
 
           });
@@ -125,7 +125,7 @@ function startGameLoop()
 
 function stopGameLoop()
 {
-  console.log("게임종료");
+
   clearInterval(gameLoopThread);
 
   LoopStatred = false;
@@ -201,7 +201,7 @@ function stopGameLoop()
   function gameLoop()
   {
     if(gameOn){
-    console.log(satiety);
+
     //점수추가 및 레벨증가 카운트증가
    score++;
    if(count%100==99){
@@ -212,7 +212,7 @@ function stopGameLoop()
    }
     if(count%300==299&&level<99){
       level++;
-      console.log("level:"+level);
+
     }
     count++;
     calcKeyInnput();
@@ -233,8 +233,6 @@ function stopGameLoop()
     checkObject();
     displayAll();
     checkStatus();
-  }else if(howToPlayOn){
-
     }
   }
 
@@ -355,7 +353,7 @@ function checkHitPlayer()
                     * (fammers[i].radius + (rabbit.height/2)))
     {
       rtnVal = true;
-      console.log("x:"+distanceX+"y:"+distanceY);
+
       break;
     }
   }
@@ -387,7 +385,7 @@ function checkFooHit(){
       foo.isDead=true; //탄제거
 
       fammerTmp.energy -=50;
-      console.log(fammerTmp.energy);
+
       if(fammerTmp.energy <=0){
         //에너지 없음 없애자
               fammerTmp.isDead=true;
@@ -571,7 +569,7 @@ function createObject(){
   var obj={x:objectX[result], y:400, type:0,isDead:false, radius:10,width:50,height:50};
   objectX[result]=-1;
   objects.push(obj);
-    console.log("당근생성");
+
   for(var i = 0 ;i <5;i++){
 
     result = Math.floor(Math.random()*(52-Math.floor(level/2)));
@@ -635,12 +633,12 @@ function checkHitObject(){
     if(isShooted){
 
       if(obj.type==0){
-        console.log("당근");
+
           obj.isDead=true;
                 score+=10;
                 satiety+=5;
       }else{
-        console.log("오브젝트타입"+obj.type);
+
             rtnVal = true;
       }
   }
