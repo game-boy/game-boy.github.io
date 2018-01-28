@@ -78,17 +78,17 @@ function init()
 
   canvas.addEventListener("click", function(e) {
 
-            var gameStart=e.layerX>150&&e.layerY>190&&
-                          e.layerX<220&&e.layerY<220;
-            var howToPlay=e.layerX>150&&e.layerY>240&&
-                          e.layerX<220&&e.layerY<270;
-            var rank=e.layerX>150&&e.layerY>290&&
-                          e.layerX<220&&e.layerY<320;
+            var gameStart=e.layerX>300&&e.layerY>380&&
+                          e.layerX<440&&e.layerY<440;
+            var howToPlay=e.layerX>300&&e.layerY>480&&
+                          e.layerX<440&&e.layerY<540;
+            var rank=e.layerX>300&&e.layerY>580&&
+                          e.layerX<440&&e.layerY<640;
             if(gameStart&&!gameOn){
               startGameLoop();
               gameOn=true;
             }else if(howToPlay){
-              
+
 
             }else if(rank){
 
@@ -194,7 +194,6 @@ function stopGameLoop()
     keyPressOn[keyValue] = false;
     if(keyValue == "13" && !LoopStatred) //enter
     {
-      startGameLoop();
     }
   }
 
@@ -295,6 +294,7 @@ function stopGameLoop()
     context.textAlign = "center";
     context.fillText("내 점수 : " + score ,
                       canvas.width/2, canvas.height/2 +20);
+                      writeUserData("i_wanna_carrot",uid,name,photo,score);
   }
 
   function displayBackGround(){
