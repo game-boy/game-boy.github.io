@@ -18,13 +18,14 @@ body{ background-color: #1cbb9b;}
   display:inline-block;
 }
 
-ol{
-  list-style: none;
-  padding-left: 0;
-}
-
 #login-text{
   font-size: 48px;
   color: white;
   margin-top: 50px;
 } 
+
+
+ol{
+  list-style: none;
+  padding-left: 0;
+}
