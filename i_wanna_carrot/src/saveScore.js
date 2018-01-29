@@ -44,11 +44,11 @@ firebase.auth().signOut().then(function(){
 });
 
 //점수 파이어베이스에 올리는 함수
-function writeUserData(gameName, userId, name, imageUrl, point) {
-  firebase.database().ref(gameName+'/' + userId).set({
+function writeUserData(gameName, point) {
+  firebase.database().ref(gameName+'/' + uid).set({
 
     username: name,
-    profile_picture : imageUrl,
+    profile_picture : photo,
     score : point
   });
 }

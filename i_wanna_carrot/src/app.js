@@ -295,7 +295,7 @@ function stopGameLoop()
     context.textAlign = "center";
     context.fillText("내 점수 : " + score ,
                       canvas.width/2, canvas.height/2 +20);
-                      writeUserData(gameName,uid,name,photo,score);
+                      writeUserData(gameName,score);
   }
 
   function displayBackGround(){
