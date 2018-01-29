@@ -118,6 +118,7 @@
     $('#BTN_LOGOUT').click(function(){
       firebase.auth().signOut().then(function(){
         alert("인증이 해제되었습니다.");
+        location.replace("https://game-boy.github.io/");
       }, function(error){
         alert(error.message);
       });

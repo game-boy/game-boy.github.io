@@ -13,7 +13,7 @@
   <body>
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="로고.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="img/로고.png" width="30" height="30" class="d-inline-block align-top" alt="">
         Mini Games
       </a>
     </nav>
@@ -61,7 +61,7 @@
         </div>
       </a>
     </div>
-
+<button id = "BTN_LOGOUT" type="button" class="btn indigo">인증해제</button>
 
 
     <!-- Optional JavaScript -->
@@ -69,5 +69,23 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="../../js/fireinit.js"></script>
+    <script>
+    $('#BTN_LOGOUT').click(function(){
+      firebase.auth().signOut().then(function(){
+        alert("인증이 해제되었습니다.");
+        location.replace("https://game-boy.github.io/");
+
+        console.log("해제");
+      }, function(error){
+        alert(error.message);
+      });
+    });
+    </script>
+
   </body>
 </html>
