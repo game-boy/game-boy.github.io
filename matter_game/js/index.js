@@ -494,7 +494,7 @@ const charProto = function() {
     ctx.save();
     ctx.scale(this.flipSide, 1);
     ctx.drawImage(charLeg_img, this.foot.x -10, this.foot.y- 30);
-    ctx.drawImage(charSkirt_img, this.skirt.x - 30, this.skirt.y + 5);
+    ctx.drawImage(charSkirt_img, this.skirt.x - 30, this.skirt.y - 8);
     ctx.drawImage(charBody_img, this.chest.x - 10, this.chest.y);
 
     ctx.fill();
@@ -559,9 +559,9 @@ const charProto = function() {
     }
 
     if (this.angle < -Math.PI / 2 || this.angle > Math.PI / 2) {
-      ctx.drawImage(charHeadL_img, -34, -30);
+      ctx.drawImage(charHeadL_img, -30, -28);
     } else {
-      ctx.drawImage(charHeadR_img, -35, -35);
+      ctx.drawImage(charHeadR_img, -31, -33);
     }
 
     ctx.strokeStyle = this.stroke;
@@ -594,13 +594,13 @@ const charProto = function() {
     ctx.save();
 
     if (this.angle < -Math.PI / 2 || this.angle > Math.PI / 2) {
-      ctx.translate(this.x + 5, this.y + 40);
+      ctx.translate(this.x + 5, this.y + 35);
       ctx.rotate(this.angle - Math.PI/2);
-      ctx.drawImage(charHandL_img, -8, -8);
+      ctx.drawImage(charHandL_img, -8, -6);
     } else {
       ctx.translate(this.x -5, this.y + 40);
       ctx.rotate(this.angle - Math.PI/2);
-      ctx.drawImage(charHandR_img, -8, -8);
+      ctx.drawImage(charHandR_img, -8, -6);
     }
     ctx.fill();
     ctx.restore();
@@ -997,7 +997,7 @@ function drawMap() {
     }
     ctx.lineTo(vertices[0].x, vertices[0].y);
   }
-  ctx.fillStyle = '#743';
+  ctx.fillStyle = '#544';
   ctx.fill();
 }
 
