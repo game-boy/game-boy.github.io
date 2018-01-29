@@ -4,8 +4,9 @@ body{ background-color: #1cbb9b;}
 }
 .button-content{
 }
+.container{text-align: center;}
 .card{
-  width: 500px;
+  display: inline-block;
   margin: auto;
   margin-top: 50px;
 }
@@ -16,4 +17,5 @@ body{ background-color: #1cbb9b;}
 
 ol{
   list-style: none;
+  padding-left: 0;
 }
