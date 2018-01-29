@@ -14,6 +14,9 @@ body{ background-color: #1cbb9b;}
   width: 150px;
   height: auto;
 }
+.card-action{
+  display:inline-block;
+}
 
 ol{
   list-style: none;
