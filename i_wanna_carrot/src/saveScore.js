@@ -13,7 +13,6 @@ messagingSenderId: "772802581798"
 firebase.initializeApp(config);
 // Get a non-default Storage bucket
 var database = firebase.database();
-var provider = new firebase.auth.FacebookAuthProvider();
 firebase.auth().onAuthStateChanged(function(user){
 if(user){//인증되었을 때
   $('#AUTH_STATE').text(user.displayName+"님 로그인 하셨습니다."); //상태 변화 메소드에서 처리 하도오 이동

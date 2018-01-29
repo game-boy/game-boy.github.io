@@ -1,6 +1,7 @@
 //변수 선언
 ////////////////////////////////////////////////////////////////////////
 //시스템적
+var gameName="i_wanna_carrot"
 var canvas=document.querySelector("#canvas");
 var context=canvas.getContext("2d");
 var threadSpeed = 16;     //Gap of Thread
@@ -91,7 +92,7 @@ function init()
 
 
             }else if(rank){
-
+              location.href="ranking.html?" + gameName;
             }
 
           });
@@ -294,7 +295,7 @@ function stopGameLoop()
     context.textAlign = "center";
     context.fillText("내 점수 : " + score ,
                       canvas.width/2, canvas.height/2 +20);
-                      writeUserData("i_wanna_carrot",uid,name,photo,score);
+                      writeUserData(gameName,uid,name,photo,score);
   }
 
   function displayBackGround(){

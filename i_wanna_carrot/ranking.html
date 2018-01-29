@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <div id="contentName"></div>
+    <div id="content">
+      <span id="DB_LODING">loding....</span>
+      <ul id="list"></ul>
+  </div>
+  </div>
+  <script src="./src/jquery-3.3.1.min.js"></script>
+  <!--파이어베이스-->
+  <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+  <script src="./src/fireinit.js">  </script>
+  <!--데이터일기  -->
+  <script type="text/javascript">
+    var gameName = location.href.split("?")[1];
+    readRanking(gameName);
+
+
+    function readRanking(gameName){
+    var ulList = document.getElementById('list');
+    var scoresRef = firebase.database().ref(gameName);
+    scoresRef.orderByChild('score').limitToLast(3).on("value", function(snapshot) {
+      var rankCount=0;
+      var ranking=0;
+      var arrayRank=[];
+      snapshot.forEach(function(data) {
+        rankCount++;
+        arrayRank[rankCount]=" 이름: "+data.val().username+"점수: "+data.val().score;
+      });
+    for(var i=arrayRank.length-1;i>0;i--){
+      ranking++;
+      const li = document.createElement('li');
+      li.innerText =ranking+arrayRank[i];
+      ulList.appendChild(li);
+    }
+    //로딩 지우기
+     $("#DB_LODING").text("");
+    });
+  }
+  </script>
+    <!-- 파이어베이스 끝 -->
+</body>
+</html>
