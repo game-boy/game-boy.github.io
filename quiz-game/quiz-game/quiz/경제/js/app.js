@@ -40,7 +40,7 @@ function progress(){
 //결과 표시
 function result(){
   var quiz_div = document.getElementById('quiz');
-  var txt = '<h1>결과</h1>' + '<h2 id = "score"> 당신의 점수: '+ quiz.score + '개를 맞췄습니다.</h2>';
+  var txt = '<h1>결과</h1>' + '<h2 id = "score"> 당신의 점수: '+ quiz.score + '개를 맞췄습니다!</h2>';
   quiz_div.innerHTML = txt;
 }
 
