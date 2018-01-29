@@ -92,6 +92,7 @@ function init()
 
 
             }else if(rank){
+              if(gameOn==false)
               location.href="ranking.html?" + gameName;
             }
 
@@ -193,8 +194,11 @@ function stopGameLoop()
     else if(keyValue == "65") keyValue = "37";  //left
     else if(keyValue == "68") keyValue = "39";  //right
     keyPressOn[keyValue] = false;
-    if(keyValue == "13" && !LoopStatred) //enter
+    if(keyValue == "13" && !LoopStatred&& gameOn) //enter
     {
+
+        startGameLoop();
+
     }
   }
 
