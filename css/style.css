@@ -8,7 +8,7 @@ body{ background-color: #1cbb9b;}
 .card{
   display: inline-block;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 #USER_PHOTO{
   width: 150px;
@@ -21,4 +21,10 @@ body{ background-color: #1cbb9b;}
 ol{
   list-style: none;
   padding-left: 0;
+}
+
+#login-text{
+  font-size: 48px;
+  color: white;
+  margin-top: 50px;
 }
