@@ -1,0 +1,19 @@
+body{ background-color: #1cbb9b;}
+.card-content{
+
+}
+.button-content{
+}
+.card{
+  width: 500px;
+  margin: auto;
+  margin-top: 50px;
+}
+#USER_PHOTO{
+  width: 150px;
+  height: auto;
+}
+
+ol{
+  list-style: none;
+}

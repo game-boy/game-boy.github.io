@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
   <div class="container" id = "CONTENTS">
@@ -16,32 +18,36 @@
         <span id="AUTH_STATE" class="blue-text">(인증되지 않음)</span>
 
         <!-- 유저정보 확인용 요소 추가  -->
-        <ol class="USER_INFO">
-          <li>UID : <span id="USER_UID" class="blue-text"></span></li>
+        <ol class="USER_INFO" display="none">
+          <!-- <li>UID : <span id="USER_UID" class="blue-text"></span></li> -->
+          <li><img src="" alt="" id="USER_PHOTO"></li>
           <li>메일 : <span id="USER_MAIL" class="blue-text"></span></li>
           <li>이름 : <span id="USER_NAME" class="blue-text"></span></li>
-          <li><img src="" alt="" id="USER_PHOTO"></li>
+
         </ol>
       </div>
+      <div class="button-content">
       <div class="card-action">
         <!-- 로그인버튼 -->
-        <button id="BTN_GOOGLE_LOGIN" type="button" class="btn indigo">구글 인증</button>
+        <button id="BTN_GOOGLE_LOGIN" type="button" class="waves-effect red waves-light btn">구글 인증</button>
         <!-- 페이스북 로그인-->
-        <button id="BTN_FACEBOOK_LOGIN" type="button" class="btn indigo">페이스북 인증</button>
+        <button id="BTN_FACEBOOK_LOGIN" type="button" class="waves-effect blue waves-light btn">페이스북 인증</button>
         <!-- 로그아웃버튼 -->
         <button id = "BTN_LOGOUT" type="button" class="btn indigo" style="diplay:none;">인증해제</button>
         <!-- 유저정보 확인용요소추가 -->
       </div>
     </div>
+    <div>
   </div>
 
 
-  <script src="./src/jquery-3.3.1.min.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
-  <script src="src\fireinit.js"></script>
+  <script src="./js/fireinit.js"></script>
 
   <script type="text/javascript">
     //구글로그인
@@ -77,7 +83,7 @@
             var token = result.credential.accessToken;
             var user = result.user;
             //다음페이지로 이동
-            location.href="../quiz-game/quiz-game/index.html";
+            location.href="./quiz-game/quiz-game/index.html";
 // location.href="i_wanna_carrot.html";
 
 
