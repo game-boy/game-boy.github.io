@@ -1,6 +1,7 @@
 var delay=10;
 var timer;
 var clock=delay;
+var gameName = "history";
 
 //퀴즈 객체 생성
 var quiz = new Quiz(questions);
@@ -46,7 +47,7 @@ function result(){
   var txt = '<h1>결과</h1>' + '<h2 id = "score"> 당신의 점수: '+ quiz.score + '개를 맞췄습니다.</h2>' + '<a href="../../../../i_wanna_carrot/ranking.html?history"><button class="btn2"> 역사 퀴즈 랭킹보기 </button></a>';
   quiz_div.innerHTML = txt;
 
-  writeUserData(history,quiz.score);
+  writeUserData(gameName,quiz.score);
 
 
 }
