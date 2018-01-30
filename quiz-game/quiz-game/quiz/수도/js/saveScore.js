@@ -1,7 +1,7 @@
 var uid;
 var photo;
 var name;
-
+var gameName = "capital";
 var config = {
 apiKey: "AIzaSyDabShKZzcS8U7DpDzaBCnzUwKE5iIU__o",
 authDomain: "gameboy-1ccd7.firebaseapp.com",
@@ -45,7 +45,7 @@ firebase.auth().signOut().then(function(){
 
 //점수 파이어베이스에 올리는 함수
 function writeUserData(gameName, point) {
-  firebase.database().ref(gameName+'/' + uid).set({
+  database.ref(gameName+'/' + uid).set({
 
     username: name,
     //profile_picture : photo,
