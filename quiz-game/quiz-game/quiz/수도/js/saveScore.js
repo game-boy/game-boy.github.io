@@ -48,7 +48,7 @@ function writeUserData(gameName, point) {
   firebase.database().ref(gameName+'/' + uid).set({
 
     username: name,
-    profile_picture : photo,
+    //profile_picture : photo,
     score : point
   });
 }
