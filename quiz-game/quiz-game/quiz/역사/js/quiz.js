@@ -1,4 +1,3 @@
-var score = 0;
 
 //문제 데이터
 var questions = [
