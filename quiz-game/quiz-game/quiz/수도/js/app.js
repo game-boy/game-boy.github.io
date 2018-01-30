@@ -47,7 +47,6 @@ function result(){
     writeUserData(quiz_capital,quiz.score);
 
 
-    writeUserData(quiz_capital,uid,name,photo,quiz.score);
 }
 
 var btn = document.querySelectorAll('.btn');
