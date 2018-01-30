@@ -1,7 +1,7 @@
 var uid;
 var photo;
 var name;
-var gameName;
+
 var config = {
 apiKey: "AIzaSyDabShKZzcS8U7DpDzaBCnzUwKE5iIU__o",
 authDomain: "gameboy-1ccd7.firebaseapp.com",
