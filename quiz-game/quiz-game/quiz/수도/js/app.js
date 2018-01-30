@@ -40,8 +40,14 @@ function progress(){
 //결과 표시
 function result(){
   var quiz_div = document.getElementById('quiz');
-  var txt = '<h1>결과</h1>' + '<h2 id = "score"> 당신의 점수: '+ quiz.score + '개를 맞췄습니다.</h2>';
+  var txt = '<h1>결과</h1>' + '<h2 id = "score"> 당신의 점수: '+ quiz.score + '개를 맞췄습니다.</h2>' + '<a href="../../../../i_wanna_carrot/ranking.html?quiz_capital"><button class="btn2"> 수도 퀴즈 랭킹보기 </button></a>';
   quiz_div.innerHTML = txt;
+
+
+    writeUserData(quiz_capital,quiz.score);
+
+
+    writeUserData(quiz_capital,uid,name,photo,quiz.score);
 }
 
 var btn = document.querySelectorAll('.btn');

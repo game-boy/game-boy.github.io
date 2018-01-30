@@ -55,3 +55,11 @@ body{
   font-size: 16px;
   border: 1px solid black #FFE3ED;
 }
+
+.btn2{
+  background-color: #fff;
+  color: #333;
+  width: 250px;
+  font-size: 16px;
+  border: 1px solid black #FFE3ED;
+}
