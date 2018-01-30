@@ -1,6 +1,7 @@
 var delay=10;
 var timer;
 var clock=delay;
+var gameName = "capital";
 
 //퀴즈 객체 생성
 var quiz = new Quiz(questions);
@@ -44,7 +45,7 @@ function result(){
   quiz_div.innerHTML = txt;
 
 
-    writeUserData(capital,quiz.score);
+    writeUserData(gameName,quiz.score);
 
 
 }
