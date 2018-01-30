@@ -51,7 +51,7 @@
       var arrayRank=[];
       snapshot.forEach(function(data) {
         rankCount++;
-        arrayRank[rankCount]=" 이름: "+data.val().username+"점수: "+data.val().score;
+        arrayRank[rankCount]=" 이름: "+data.val().username+"  점수: "+data.val().score;
       });
     for(var i=arrayRank.length-1;i>0;i--){
       ranking++;
