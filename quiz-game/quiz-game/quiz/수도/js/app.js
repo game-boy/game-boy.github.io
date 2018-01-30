@@ -44,7 +44,7 @@ function result(){
   quiz_div.innerHTML = txt;
 
 
-    writeUserData(gameName.score);
+    writeUserData(capital,quiz.score);
 
 
 }
